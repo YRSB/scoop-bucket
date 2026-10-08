@@ -15,7 +15,7 @@
     },
     "bin": [
         [
-            "opencode2api",
+            "opencode2api.exe",
             "opencode2api",
             "-config \"$persist_dir\\config.json\""
         ]
