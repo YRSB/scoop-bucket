@@ -31,6 +31,7 @@ scoop bucket add scoop-bucket file:///C:/path/to/scoop-bucket
 | --- | --- |
 | [videometricslab](https://github.com/4KVCD/VideoMetricsLab) | 测量和对比视频编码质量：VMAF、VMAF NEG、PSNR、SSIM、XPSNR、SSIMULACRA2、Butteraugli、ColorVideo VDP |
 | [opencode2api](https://github.com/jasonxu114514/opencode2api) | Go 写的 OpenCode Zen 网关，兼容 OpenAI 与 Anthropic API，带密钥/代理池、自动路由和内置 WebUI |
+| [garbro](https://github.com/crskycode/GARbro) | 视觉小说资源浏览器：打开、解包各种游戏用的压缩包格式 |
 
 `videometricslab` 运行时需要 FFmpeg 9 及以上、且带 libvmaf。它没有写进 manifest
 的 `depends`：应用启动时如果 `PATH` 里找不到 FFmpeg，会自己弹窗询问路径。
@@ -40,6 +41,12 @@ scoop bucket add scoop-bucket file:///C:/path/to/scoop-bucket
 默认读**当前目录**下的 `config.json`，读不到就直接退出。示例配置里 API 监听
 `127.0.0.1:8080`、WebUI 监听 `0.0.0.0:8081`；对外暴露之前先改掉 `server_keys`
 和 `webui.password`。
+
+`garbro` 跑的是 `GARbro.GUI.exe`，需要 .NET Framework 4.7.2 及以上，Windows 10/11
+自带，不用装。这里跟的是 crskycode 发布的 Mod 版本（tag 形如
+`GARbro-Mod-1.0.2.2`），上游项目是 [morkt/GARbro](https://github.com/morkt/GARbro)，
+因为 tag 里带前缀，`checkver` 才没有用 GitHub 模式的默认正则（那个正则会把
+`GARbro-Mod-` 里的 `-` 当成版本号）。
 
 ## 添加 manifest
 
