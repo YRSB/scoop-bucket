@@ -43,10 +43,14 @@ scoop bucket add scoop-bucket file:///C:/path/to/scoop-bucket
 和 `webui.password`。
 
 `garbro` 跑的是 `GARbro.GUI.exe`，需要 .NET Framework 4.7.2 及以上，Windows 10/11
-自带，不用装。这里跟的是 crskycode 发布的 Mod 版本（tag 形如
-`GARbro-Mod-1.0.2.2`），上游项目是 [morkt/GARbro](https://github.com/morkt/GARbro)，
-因为 tag 里带前缀，`checkver` 才没有用 GitHub 模式的默认正则（那个正则会把
-`GARbro-Mod-` 里的 `-` 当成版本号）。
+自带，不用装。这里跟的是 crskycode 发布的 Mod 版本，上游项目是
+[morkt/GARbro](https://github.com/morkt/GARbro)。这个仓库里有两套编号，别搞混：
+**GitHub Releases** 的 tag 是 `GARbro-Mod-1.0.0.0` … `GARbro-Mod-1.0.2.2`（共 23 个，
+每个带一个 zip），而仓库的 **git tag** 是另一套 `v1.5.x`（继承自上游、没有 zip）。
+因此 `checkver` 没有用 GitHub 模式的默认正则，它在这个仓库上两种模式都会失灵：
+API 模式的 `(?:v|V)?([\d.-]+)` 会先匹配到 `GARbro-Mod-` 里的 `-`，HTML 模式的
+`/releases/tag/(?:v|V)?([\d.-]+)` 则因为 `/releases/tag/` 后面紧跟字母而匹配不到。
+现在用的 `GARbro-Mod-(?<version>[\d.]+)` 两种模式下都只吃版本号部分。
 
 ## 添加 manifest
 
