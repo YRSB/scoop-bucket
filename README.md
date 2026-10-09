@@ -21,6 +21,7 @@ manifest 由下面的工作流自动更新。没有 `scoop bucket update` 的 Sc
 | [videometricslab](https://github.com/4KVCD/VideoMetricsLab) | 测量和对比视频编码质量：VMAF、VMAF NEG、PSNR、SSIM、XPSNR、SSIMULACRA2、Butteraugli、ColorVideo VDP | 需要 FFmpeg 9 及以上且带 libvmaf，没有写进 `depends`：`PATH` 里找不到时应用自己弹窗询问 |
 | [opencode2api](https://github.com/jasonxu114514/opencode2api) | Go 写的 OpenCode Zen 网关，兼容 OpenAI 与 Anthropic API，带密钥与代理池、自动路由和内置 WebUI | 配置在 `~/scoop/persist/opencode2api/config.json`；示例里 API 监听 `127.0.0.1:8080`、WebUI 监听 `0.0.0.0:8081`，对外暴露前先改 `server_keys` 和 `webui.password` |
 | [garbro](https://github.com/crskycode/GARbro) | 视觉小说资源浏览器：打开、解包各种游戏用的压缩包格式 | 跑 `GARbro.GUI.exe`，需要 .NET Framework 4.7.2 及以上（Win10/11 自带）；本 bucket 跟的是 crskycode 的 Mod 版，上游为 [morkt/GARbro](https://github.com/morkt/GARbro) |
+| [lunatranslator](https://github.com/HIllya51/LunaTranslator) | 视觉小说翻译器：HOOK 取文、OCR、语音合成，接大量翻译引擎 | 只提供 x64 版（Win10/11）；设置与翻译记录存在 `~/scoop/persist/lunatranslator`，升级不丢。extras 里也有同名 manifest 但停在 10.17.1.11，要用本 bucket 的 12.x 必须显式写全 `scoop install scoop-bucket/lunatranslator` |
 
 ## 工作流
 
