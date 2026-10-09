@@ -1,0 +1,36 @@
+{
+    "version": "12.0.1",
+    "description": "Visual novel translation tool with HOOK text extraction, OCR, speech synthesis and many translation engines",
+    "homepage": "https://github.com/HIllya51/LunaTranslator",
+    "license": "GPL-3.0",
+    "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v12.0.1/LunaTranslator_x64.zip",
+    "hash": "3555842e3e2d522fa330b723a4be5ece1e835ecd3659759bedc2aff178bd21ef",
+    "bin": [
+        [
+            "LunaTranslator.exe",
+            "LunaTranslator"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "LunaTranslator.exe",
+            "LunaTranslator"
+        ]
+    ],
+    "installer": {
+        "script": [
+            "$src = Get-ChildItem -LiteralPath $dir -Directory | Select-Object -First 1",
+            "Get-ChildItem -LiteralPath $src.FullName -Force | Move-Item -Destination $dir -Force",
+            "Remove-Item -LiteralPath $src.FullName -Recurse -Force"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64.zip",
+        "hash": "sha256:3555842e3e2d522fa330b723a4be5ece1e835ecd3659759bedc2aff178bd21ef"
+    },
+    "notes": [
+        "Uses the x64 build for Windows 10 and 11. The release also ships LunaTranslator_x64_win7.zip for Windows 7 and LunaTranslator_x86_winxp.zip for Windows XP.",
+        "LunaTranslator_admin.exe is the same tool started as administrator, which some HOOK modes need."
+    ]
+}
