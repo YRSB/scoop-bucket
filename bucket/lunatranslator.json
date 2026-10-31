@@ -1,12 +1,12 @@
 {
-    "version": "12.1.3.3",
+    "version": "12.1.3.4",
     "description": "Visual novel translation tool with HOOK, OCR, speech synthesis and many translation engines",
     "homepage": "https://github.com/HIllya51/LunaTranslator",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v12.1.3.3/LunaTranslator_x64.zip",
-            "hash": "687a76b688fb9597b42a1895b3954fc1fc0fd20a4821f42153c610d4d91e2a8d",
+            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v12.1.3.4/LunaTranslator_x64.zip",
+            "hash": "773900066894621326939e984fcf8a2b42ce6bab159af1bdf496ca263b0a7b92",
             "extract_dir": "LunaTranslator_x64"
         }
     },
